@@ -1,0 +1,222 @@
+/* Untuk layar Tablet dan HP (Lebar maksimal 768px) */
+@media (max-width: 768px) {
+    /* Menyesuaikan Hero Section */
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+    
+    .search-box {
+        width: 90%;
+        flex-direction: column;
+        border-radius: 15px;
+        background: transparent;
+    }
+
+    .search-box input {
+        border-radius: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .search-box button {
+        border-radius: 15px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    /* Menyesuaikan Grid Layout menjadi 1 kolom */
+    .sambutan-grid,
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .img-box {
+        height: 250px;
+    }
+
+    /* Menyesuaikan Navbar (Navigasi Sederhana untuk Mobile) */
+    .navbar {
+        padding: 15px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8); /* Dibuat lebih gelap agar teks terbaca */
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-content li a {
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Menyesuaikan Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Menyesuaikan Halaman Kondisi Sekolah di Mobile */
+    .kondisi-item,
+    .kondisi-item:nth-child(even) {
+        flex-direction: column; /* Memaksa semua item menjadi atas-bawah */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .kondisi-img {
+        width: 100%;
+        height: 220px; /* Gambar dibuat sedikit lebih pendek di HP */
+    }
+
+    .kondisi-text {
+        padding: 0;
+    }
+
+    .kondisi-text h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Menyesuaikan Halaman Sarana Prasarana di Mobile (Layar Kecil) */
+    .fasilitas-grid {
+        grid-template-columns: 1fr; /* Berubah menjadi 1 kolom menyusun ke bawah */
+        gap: 25px;
+    }
+
+    .fasilitas-img {
+        height: 200px;
+    }
+
+    /* Tablet: Wakil Kepala & Staf TU menjadi 2 kolom */
+    .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Menyesuaikan Halaman Staff di HP */
+    .grid-center {
+        grid-template-columns: 1fr; /* Lebar 100% mengikuti layar */
+    }
+
+    .grid-3, .grid-4 {
+        grid-template-columns: 1fr; /* Semua susunan menjadi 1 baris ke bawah */
+        gap: 20px;
+    }
+
+    .staff-img {
+        height: 250px; /* Sedikit dipendekkan di HP */
+    }
+
+    /* Menyesuaikan Halaman Struktur Organisasi di Mobile */
+    .org-level.grid-2,
+    .org-level.grid-3,
+    .org-level.grid-4 {
+        grid-template-columns: 1fr; /* Semua bagan turun menjadi atas-bawah */
+        width: 100%;
+        gap: 20px;
+    }
+    .news-grid {
+        grid-template-columns: 1fr; /* 1 Kolom memanjang ke bawah untuk HP */
+        gap: 25px;
+    }
+
+    /* Menyesuaikan Halaman Agenda di Mobile */
+    .agenda-item {
+        flex-direction: column; /* Mengubah susunan Tanggal di atas, Info di Bawah */
+    }
+
+    .agenda-date {
+        padding: 15px;
+        flex-direction: row; /* Tanggal dan Bulan berjejer menyamping di HP */
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .agenda-date .day {
+        font-size: 1.8rem;
+    }
+    /* Menyesuaikan Halaman Ekstrakurikuler di Mobile */
+    .ekskul-grid {
+        grid-template-columns: 1fr; /* Berubah jadi 1 kolom di HP */
+        gap: 30px;
+    }
+
+    .ekskul-banner {
+        height: 200px; /* Banner dipendekkan sedikit di HP */
+    }
+    
+}
+
+/* Untuk layar Tablet (Lebar antara 769px sampai 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .fasilitas-grid {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di Tablet */
+    }
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom untuk Tablet */
+    }
+
+    
+}
+
+/* Menyesuaikan Profil Alumni di Mobile */
+    .alumni-card {
+        flex: 0 0 100%; /* Ubah menjadi 1 card full layar */
+        flex-direction: column; /* Gambar di atas, teks di bawah */
+        padding: 15px;
+    }
+
+    .alumni-img-box {
+        flex: 0 0 auto;
+        height: 250px;
+        width: 100%;
+    }
+
+    .alumni-card::before {
+        left: 20px; /* Geser tanda kutip samar */
+    }
+
+    /* Di HP tidak pakai hover, jadi tombol selalu ditampilkan tapi digeser ke dalam */
+    .carousel-btn {
+        opacity: 1;
+        visibility: visible;
+        width: 35px;
+        height: 35px;
+    }
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
+
+    /* Menyesuaikan Halaman Visi Misi Split di Mobile */
+    .visi-misi-split {
+        grid-template-columns: 1fr; /* Berubah menjadi 1 kolom (atas-bawah) */
+        gap: 30px;
+    }
+
+    .vm-card {
+        padding: 30px 20px;
+    }
+
+    .visi-text {
+        font-size: 1.2rem; /* Ukuran teks visi dikecilkan sedikit di HP */
+    }
+
+    
